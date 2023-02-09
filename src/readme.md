@@ -1,0 +1,1 @@
+Ska göra ett chatprogram där en server och en client kan prata med varandra.
