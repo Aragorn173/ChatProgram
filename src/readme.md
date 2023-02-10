@@ -13,3 +13,9 @@ Programmen ska hantera skicka och ta emot simultant (samtidigt) med hjälp av tr
 Jag har skapat en grundläggande struktur av programmet.
 Skapade en simpel GUI för clienten och servern. 
 Jag har även skapat en controller så jag kan starta view och model.
+
+
+#### 2023-02-10
+
+Har lagt en model så jag kan köra programmet i terminalen.
+Jag har börjat att koppla knapparna och textfälten så programmet använder de istället för terminalen.
