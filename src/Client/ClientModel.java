@@ -16,6 +16,10 @@ public class ClientModel {
 
     String msg = "";
 
+    String chat = "";
+
+    public String getChat() {return chat;}
+
     public void setMsg(String msg) {
         this.msg = msg;
     }
@@ -23,6 +27,13 @@ public class ClientModel {
     public String getMsg() {
         return msg;
     }
+
+    public void addMsgToChat(String msg) {
+        chat += "CLIENT:" + msg + "\n";
+    }
+
+
+
 
     public ClientModel(String ip, int port) {
         try {

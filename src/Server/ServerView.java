@@ -3,9 +3,9 @@ package Server;
 import javax.swing.*;
 
 public class ServerView {
-    private JTextPane textPane1;
+    private JTextPane chat;
     private JPanel panel1;
-    private JTextField textField1;
+    private JTextField input;
     private JButton sendButton;
     private JList list1;
 

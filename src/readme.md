@@ -19,3 +19,9 @@ Jag har även skapat en controller så jag kan starta view och model.
 
 Har lagt en model så jag kan köra programmet i terminalen.
 Jag har börjat att koppla knapparna och textfälten så programmet använder de istället för terminalen.
+
+
+#### 2023-02-16
+Jag har gjort att min sendbutton tar det som står i textfältet och skriver
+det i chatrutan. Jag måste göra samma sak i servern också och sedan göra så
+att servern och clienten kan se varandras meddelanden.

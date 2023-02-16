@@ -1,23 +1,27 @@
 package Client;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ClientView {
-    private JTextPane textPane1;
+    private JTextPane chat;
     private JPanel panel1;
-    private JTextField textField1;
+    private JTextField input;
     private JButton sendButton;
     private JList list1;
 
 
+    public ClientView() {
 
-    public void setTextPane1(String c) {
-        textPane1.setText(c);
     }
 
-    public String getTextField1() {
-        return textField1.getText();
+    public void setChat(String c) {
+        chat.setText(c);
+    }
+
+    public String getInput() {
+        return input.getText();
     }
 
     public void setList1(JList list1) {
@@ -31,6 +35,12 @@ public class ClientView {
     public JPanel getPanel() {
         return panel1;
     }
+
+    public JButton getSendButton() {
+        return sendButton;
+    }
+
+
 }
 
 
