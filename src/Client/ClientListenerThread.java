@@ -7,9 +7,9 @@ import java.io.PrintWriter;
 
 public class ClientListenerThread implements Runnable{
     private BufferedReader in;
-    private PrintStream out;
+    private ClientController out;
 
-    public ClientListenerThread(BufferedReader in, PrintStream out) {
+    public ClientListenerThread(BufferedReader in, ClientController out) {
         this.in = in;
         this.out = out;
     }
@@ -23,7 +23,7 @@ public class ClientListenerThread implements Runnable{
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            out.println(msg);
+            out.newMessage(msg);
         }
     }
 

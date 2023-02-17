@@ -14,6 +14,8 @@ public class ClientModel {
     PrintWriter out;
     BufferedReader in;
 
+
+
     String msg = "";
 
     String chat = "";
@@ -29,7 +31,7 @@ public class ClientModel {
     }
 
     public void addMsgToChat(String msg) {
-        chat += "CLIENT:" + msg + "\n";
+        chat += msg + "\n";
     }
 
 
@@ -62,6 +64,10 @@ public class ClientModel {
             msg = tgb.nextLine();
             out.println("CLIENT: " + msg);
         }
+    }
+
+    public void sendMessage(String msg) {
+        out.println("CLIENT: " + msg);
     }
 
     public void shutDown() {

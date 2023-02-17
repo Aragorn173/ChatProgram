@@ -10,7 +10,25 @@ public class ServerView {
     private JList list1;
 
 
+    public void setChat(String c) {
+        chat.setText(c);
+    }
+
+    public String getInput() {
+        return input.getText();
+    }
+
+    public void setList1(JList list1) {
+        this.list1 = list1;
+    }
+
     public JPanel getPanel() {
         return panel1;
     }
+
+    public JButton getSendButton() {
+        return sendButton;
+    }
 }
+
+
