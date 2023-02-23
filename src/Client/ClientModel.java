@@ -20,6 +20,12 @@ public class ClientModel {
 
     String chat = "";
 
+    String name = "";
+
+    public void setName(String name) { this.name = name;}
+
+    public String getName() { return name; }
+
     public String getChat() {return chat;}
 
     public void setMsg(String msg) {
@@ -62,7 +68,7 @@ public class ClientModel {
         System.out.println("chatting...");
         while (!msg.equals("QUIT")) {
             msg = tgb.nextLine();
-            out.println("CLIENT: " + msg);
+            out.println(name + ":"  + msg);
         }
     }
 

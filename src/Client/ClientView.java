@@ -8,21 +8,18 @@ public class ClientView {
     private JPanel panel1;
     private JTextField input;
     private JButton sendButton;
-    private JList list1;
+    private JTextPane list1;
 
 
     public void setChat(String c) {
         chat.setText(c);
     }
 
+    public void setInput(String c) {input.setText(c);}
+
     public String getInput() {
         return input.getText();
     }
-
-    public void setList1(JList list1) {
-        this.list1 = list1;
-    }
-
 
     public JPanel getPanel() {
         return panel1;
@@ -30,6 +27,14 @@ public class ClientView {
 
     public JButton getSendButton() {
         return sendButton;
+    }
+
+
+
+
+
+    public void listAddUser (String c) {
+        list1.setText(c);
     }
 }
 
