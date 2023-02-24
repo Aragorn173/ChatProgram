@@ -33,3 +33,11 @@ så man kan skriva in ett namn när man startar programmet och att när man skic
 ett meddelande står det att det kommer från rätt namn.
 Nästa gång ska jag fixa så att namnet kommer in i listan av användare och att
 den andra kan se namnet när den tar emot ett meddelande.
+
+
+
+#### 2023-02-24
+Nu kan servern och klienten båda välja ett namn när det startas och när de
+skickar ett meddelande står det namnet före deras meddelande. 
+Namnlistan visar inte båda namnen utan bara det egna namnet.
+Rutan som chatten är i puttar bort knappen om ett för stort meddelande skickas.

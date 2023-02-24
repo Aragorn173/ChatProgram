@@ -73,7 +73,7 @@ public class ClientModel {
     }
 
     public void sendMessage(String msg) {
-        out.println("CLIENT: " + msg);
+        out.println(name + ": " + msg);
     }
 
     public void shutDown() {

@@ -30,12 +30,7 @@ public class ClientView {
     }
 
 
-
-
-
-    public void listAddUser (String c) {
-        list1.setText(c);
-    }
+    public void listAddUser (String c) {list1.setText(c);}
 }
 
 

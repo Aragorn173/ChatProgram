@@ -16,6 +16,12 @@ public class ServerModel {
 
     String chat = "";
 
+    String name = "";
+
+    public void setName(String name) { this.name = name;}
+
+    public String getName() { return name; }
+
     public String getChat() {return chat;}
 
     public void setMsg(String msg) {
@@ -31,7 +37,7 @@ public class ServerModel {
     }
 
     public void sendMessage(String msg) {
-        out.println("SERVER: " + msg);
+        out.println(name + ": " + msg);
     }
 
     public ServerModel(int port) {
@@ -70,7 +76,7 @@ public class ServerModel {
         String msg = "";
         while (!msg.equals("QUIT")) {
             msg = tgb.nextLine();
-            out.println("SERVER: " + msg);
+            out.println(name + ": " + msg);
         }
     }
 

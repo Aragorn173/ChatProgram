@@ -15,10 +15,12 @@ public class ClientController extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 model.setMsg(view.getInput());
-                model.addMsgToChat(model.getName() + ": " +model.getMsg());
-                view.setChat(model.getChat());
-                model.sendMessage(model.getMsg());
-                view.setInput("");
+                if (model.getMsg().length() > 0) {
+                    model.addMsgToChat(model.getName() + ": " + model.getMsg());
+                    view.setChat(model.getChat());
+                    model.sendMessage(model.getMsg());
+                    view.setInput("");
+                }
             }
         });
 
@@ -32,14 +34,15 @@ public class ClientController extends JFrame {
 
     public static void main(String[] args) {
         ClientModel m = new ClientModel("10.80.45.137", 1731);
+        //ClientModel m = new ClientModel("10.80.47.10", 5858); //Alexander
+        //ClientModel m = new ClientModel("10.80.46.193", 4739); //Alexander
         ClientView v = new ClientView();
         ClientController thisIsTheProgram = new ClientController(m,v);
         thisIsTheProgram.setVisible(true);
         m.setName(JOptionPane.showInputDialog("Name?"));
         v.listAddUser(m.getName());
 
-        //ClientModel me = new ClientModel("10.80.47.10", 5858); //Alexander
-        //  Client me = new Client("10.80.45.137", 1731);
+
         m.getStreams();
         ClientListenerThread l = new ClientListenerThread(m.in, thisIsTheProgram);
         Thread listener = new Thread(l);

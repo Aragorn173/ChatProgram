@@ -16,9 +16,12 @@ public class ServerController extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 model.setMsg(view.getInput());
-                model.addMsgToChat(model.getMsg());
+                if (model.getMsg().length() > 0) {
+                model.addMsgToChat(model.getName() + ": " +model.getMsg());
                 view.setChat(model.getChat());
                 model.sendMessage(model.getMsg());
+                view.setInput("");
+                }
 
             }
         });
@@ -29,6 +32,7 @@ public class ServerController extends JFrame {
         this.setVisible(true);
         v.getSendButton();
 
+
     }
 
 
@@ -38,6 +42,9 @@ public class ServerController extends JFrame {
         ServerView v = new ServerView();
         ServerController thisIsTheProgram = new ServerController(m,v);
         thisIsTheProgram.setVisible(true);
+        m.setName(JOptionPane.showInputDialog("Name?"));
+        v.listAddUser(m.getName());
+
         m.acceptClient();
         m.getStreams();
         ServerListenerThread l = new ServerListenerThread(m.in, thisIsTheProgram);
