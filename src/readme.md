@@ -25,3 +25,11 @@ Jag har börjat att koppla knapparna och textfälten så programmet använder de
 Jag har gjort att min sendbutton tar det som står i textfältet och skriver
 det i chatrutan. Jag måste göra samma sak i servern också och sedan göra så
 att servern och clienten kan se varandras meddelanden.
+
+#### 2023-02-23
+Servern och klienten kan chatta med varandra och man kan se om meddelandet är
+från servern eller klienten. Det jag har försökt med idag är att fixa 
+så man kan skriva in ett namn när man startar programmet och att när man skickar
+ett meddelande står det att det kommer från rätt namn.
+Nästa gång ska jag fixa så att namnet kommer in i listan av användare och att
+den andra kan se namnet när den tar emot ett meddelande.
