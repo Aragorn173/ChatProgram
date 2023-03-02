@@ -41,3 +41,9 @@ Nu kan servern och klienten båda välja ett namn när det startas och när de
 skickar ett meddelande står det namnet före deras meddelande. 
 Namnlistan visar inte båda namnen utan bara det egna namnet.
 Rutan som chatten är i puttar bort knappen om ett för stort meddelande skickas.
+
+#### 2023-03-02
+Idag fixade jag att man kan klicka enter istället för att behöva klicka på knappen.
+Nästa lektion vill jag fixa så texrutan med chatten inte växer och trycker bort listan eller 
+knappen. När meddelandet är för långt ska den bryta till nästa rad och om
+tillräckligt många meddelanden ska det komma en scrollbar vertikalt.

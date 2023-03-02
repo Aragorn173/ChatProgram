@@ -2,6 +2,8 @@ package Client;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 public class ClientController extends JFrame {
     ClientModel model;
@@ -23,13 +25,40 @@ public class ClientController extends JFrame {
                 }
             }
         });
+        v.getEnter().addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode()==KeyEvent.VK_ENTER) {
+                        model.setMsg(view.getInput());
+                    if (model.getMsg().length() > 0) {
+                        model.addMsgToChat(model.getName() + ": " + model.getMsg());
+                        view.setChat(model.getChat());
+                        model.sendMessage(model.getMsg());
+                    }
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                if (e.getKeyCode()==KeyEvent.VK_ENTER){
+                    view.setInput("");
+                }
+            }
+        });
 
         this.setContentPane(view.getPanel());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.pack();
         this.setVisible(true);
         v.getSendButton();
+
     }
+
 
 
     public static void main(String[] args) {

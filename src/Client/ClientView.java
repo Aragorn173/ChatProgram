@@ -11,6 +11,11 @@ public class ClientView {
     private JTextPane list1;
 
 
+
+    public JTextField getEnter() {
+        return input;
+    }
+
     public void setChat(String c) {
         chat.setText(c);
     }
