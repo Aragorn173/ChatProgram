@@ -47,3 +47,9 @@ Idag fixade jag att man kan klicka enter istället för att behöva klicka på k
 Nästa lektion vill jag fixa så texrutan med chatten inte växer och trycker bort listan eller 
 knappen. När meddelandet är för långt ska den bryta till nästa rad och om
 tillräckligt många meddelanden ska det komma en scrollbar vertikalt.
+
+
+#### 2023-03-03
+Lade till chatten i en scrollpane så nu om det skrivs många meddelanden kommer
+man kunna skrolla igenom alla meddelanden. Gjorde även en executable som startar
+servern och klienten samtidigt och gjorde en artifact av den.
